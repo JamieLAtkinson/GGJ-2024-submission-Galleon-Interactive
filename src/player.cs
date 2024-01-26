@@ -43,18 +43,21 @@ public partial class player : CharacterBody2D
     [Export]
     private int Hp = MaxHp;
     [Export]
-    public int Damgae = 10;
+    public int Damage = 10;
 
-    int public DamageTaken ()
+    public int DamageTaken ()
     {
         return HpChanged(DamageAmount, Hp);
     
     }
 
-    int private HpChanged (int Change, int Origin)
+
+    private int HpChanged (int Change)
     {
-        int Total = Origin - Change;
+        int Total = Hp - Change;
         return Total;
+        [Signal]
+        public delegate void MySignalEventHandler();
     }
 
 
