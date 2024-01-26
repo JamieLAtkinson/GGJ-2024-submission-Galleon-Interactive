@@ -1,0 +1,19 @@
+Start
+
+Player walks onto screen at the outskirts of this place
+
+Told their name and asked to help the town get their smiles back. Is given a basic weapon.
+
+Player walks into the first area and is given a quick tutorial on how to attack and move, get familiar with mechanics, etc… The first room opens up
+
+Player enters the first main area which will have a door in it somewhere with an NPC standing next to it. There are some easy enemies with slow attacks. At the end of this area is a chest containing 1 essence of joy. 
+
+The player can return to the door and give the sprite back to the NPC. They unlock the door.
+
+The player proceeds to the next area which has a mix of the first enemies and faster ones with lower health. These enemies will require the player to use dodges. There will also be some harder platforming. 
+
+Making their way through this area, they will encounter a difficult platforming section with two routes. One leads to the sprite, the other leads to the door. The sprite route is a lot harder.
+
+After beating this, the player gets to the final area which has the hardest enemies. They are fast, tough, and hit for double damage. There isn’t much ground and is mostly floating platforms with wider platforms for fighting enemies. Some platforms will disappear. Jumps that require a dash. Get the last sprite from defeating one of the tough enemies that is slightly bigger and hits for 3 damage. Give this to the final villager who takes you to the village. They have a party.
+
+The End
