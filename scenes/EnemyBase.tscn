@@ -6,6 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
 
 [node name="EnemyBase" type="CharacterBody2D"]
+collision_layer = 4
 collision_mask = 255
 script = ExtResource("1_d3x58")
 
