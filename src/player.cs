@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics.Contracts;
 
 public partial class player : CharacterBody2D
 {
@@ -18,7 +19,7 @@ public partial class player : CharacterBody2D
 			velocity.Y += gravity * (float)delta;
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		if (Input.IsActionJustPressed("Jump") && IsOnFloor())
 			velocity.Y = JumpVelocity;
 
 		// Get the input direction and handle the movement/deceleration.
@@ -36,4 +37,33 @@ public partial class player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+   
+
+	[Export]
+	public int MaxHp = 10;
+	[Export]
+	private int Hp = MaxHp;
+	[Export]
+	public int Damage = 10;
+	[signal]
+	public delegate void MySignalEventHandler();
+
+	public int DamageTaken ()
+	{
+		return HpChanged(DamageAmount, Hp);
+	
+	}
+
+	
+	private int HpChanged (int Change)
+	{
+		int Total = Hp - Change;
+		EmitSignal(MySignalEventHandler, Hp);
+		return Total;
+
+
+	}
+
+
 }
