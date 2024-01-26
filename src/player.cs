@@ -38,12 +38,20 @@ public partial class player : CharacterBody2D
         MoveAndSlide();
     }
 
+    //method for emitting signals
+    public void MyMethodEmittingSignals()
+    {
+        EmitSignal(SignalName.MySignal);
+        EmitSignal(SignalName.MySignalWithArgument, "HP");
+    }
+
     [Export]
     public int MaxHp = 10;
     [Export]
     private int Hp = MaxHp;
     [Export]
     public int Damage = 10;
+    public delegate void MySignalEventHandler();
 
     public int DamageTaken ()
     {
@@ -51,13 +59,15 @@ public partial class player : CharacterBody2D
     
     }
 
-
+    
     private int HpChanged (int Change)
     {
         int Total = Hp - Change;
         return Total;
         [Signal]
-        public delegate void MySignalEventHandler();
+        MyMethodEmittingSignals()
+
+
     }
 
 
