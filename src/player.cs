@@ -39,9 +39,11 @@ public partial class player : CharacterBody2D
     }
 
     [Export]
-    int public const Hp = 10;
+    public int MaxHp = 10;
     [Export]
-    int public const Damgae = 10;
+    private int Hp = MaxHp;
+    [Export]
+    public int Damgae = 10;
 
     int public DamageTaken ()
     {
