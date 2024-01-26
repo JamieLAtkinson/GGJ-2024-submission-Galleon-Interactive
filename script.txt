@@ -1,19 +1,37 @@
-Start
+[Things to know]
+All NPC's can be spoken to before and after the area has been completed.
+All dialogue and when it should be said is written in dialogue.txt
 
+[Start]
 Player walks onto screen at the outskirts of this place
+Meet first NPC and asked to help the town get their smiles back. 
+Given a basic weapon.
 
-Told their name and asked to help the town get their smiles back. Is given a basic weapon.
+[Tutorial area]
+Player walks into the first area and is given a quick tutorial on how to attack, move, get familiar with mechanics, etc… 
+The first room is already open
 
-Player walks into the first area and is given a quick tutorial on how to attack and move, get familiar with mechanics, etc… The first room opens up
-
-Player enters the first main area which will have a door in it somewhere with an NPC standing next to it. There are some easy enemies with slow attacks. At the end of this area is a chest containing 1 essence of joy. 
-
+[Area 1]
+Player enters the first main area which will have a door in it somewhere with an NPC standing next to it.
+There are some easy enemies with slow attacks. 
+At the end of this area is a chest containing 1 sprite of joy. 
 The player can return to the door and give the sprite back to the NPC. They unlock the door.
 
-The player proceeds to the next area which has a mix of the first enemies and faster ones with lower health. These enemies will require the player to use dodges. There will also be some harder platforming. 
+[Area 2]
+The player proceeds to the next area which has a mix of the first enemies and faster ones with lower health. 
+These enemies will require the player to use dodges. 
+There will also be some harder platforming. 
+Making their way through this area, they will encounter a difficult platforming section with two routes. 
+One leads to the sprite, the other leads to the door. 
+The sprite route is a lot harder.
+Go back to the door and proceed to next room.
 
-Making their way through this area, they will encounter a difficult platforming section with two routes. One leads to the sprite, the other leads to the door. The sprite route is a lot harder.
-
-After beating this, the player gets to the final area which has the hardest enemies. They are fast, tough, and hit for double damage. There isn’t much ground and is mostly floating platforms with wider platforms for fighting enemies. Some platforms will disappear. Jumps that require a dash. Get the last sprite from defeating one of the tough enemies that is slightly bigger and hits for 3 damage. Give this to the final villager who takes you to the village. They have a party.
+[Area 3]
+The player gets to the final area which has the hardest enemies. 
+They are fast, tough, and hit for double damage. 
+There isn’t much ground and is mostly floating platforms with wider platforms for fighting enemies. Some platforms will disappear. Jumps that require a dash. 
+There is a secret path which leads to Schrodinger the cat who the player can talk to. 
+Get the last sprite from defeating one of the tough enemies that is slightly bigger and hits for 3 damage. 
+Give this joy to the final villager who takes you to the village. They have a party.
 
 The End

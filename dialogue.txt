@@ -1,0 +1,75 @@
+[First NPC]:
+	*breathing heavily*
+	You there, traveller. I need your help.
+	The miseromancers have stolen the joy of the villagers!
+	I only just survived with my smile, but I can feel it fading.
+	Please help! Make your way to the village and help us smile again.
+	I wish you luck.
+
+
+[First Door NPC]:
+	[Pre joy]:
+		Oh hello...
+		What do you want?
+		My smile? Oh yeah, I forgot about that...
+		You're going after the joy? Why bother?
+		Life sucks anyways.
+		First your dad leaves, then your mum, and then your girlfriend.
+		Even the cat left! Nothing is worth it anymore...
+
+	[Post joy]:
+		Oh my god! Thank you so much traveller!
+		I'd forgotten how good it felt to smile.
+		I assume you intend to go to the village. I'll open this gate for you.
+		Oh, and if you see my dear schrodinger, tell him that daddy misses him...
+
+
+[Second Door NPC]: 
+	[Pre joy]:
+		Hey, watch where you're going.
+		Me? I'm just wandering. I have nothing to do.
+		I've got no idea where I am but...
+		I'm not too bothered.
+		The rat shop was becoming a hassle anyways.
+		Huh? You've never heard of a rat shop?
+		Well... We sell rats... thats it really...
+		Can you leave me alone now? I'm enjoying the quiet.
+
+	[Post joy]:
+		Wow... WOW!
+		I can't believe I'd say that about my shop.
+		I love my rats! They're so sweet and rodent-y.
+		Anyways I'll open the gate for you.
+		Please save my shop!
+
+
+[Schrodinger The Cat]:
+	...
+	..........
+	Meow...?
+	*sigh* You got me
+	I'm Schrodinger. I bet Barry sent you, right?
+	Well too bad, I'm not going back to that loser.
+	Everyone left him because he doesn't shower.
+	Can you imagine? The smell is... something else.
+	I'm not going back.
+	I'm gonna sit here in this tree. You know what a retirement home is right?
+	Now buzz off before I scratch your eyes out.
+
+[Third door NPC]:
+	[Pre joy]:
+		Do you have kids? No?
+		Don't have them. All they do is ruin your life.
+		I used to have friends. I was a social butterfly.
+		Then Tina and Phil came along...
+		They hide in the cupboards! My husband had two heart attacks!
+		Then the stroke came along and finished him off.
+		Seriously, don't have kids.
+
+	[Post joy]:
+		Jeez. What a slump that was.
+		Thank you for your help! I feel a lot better!
+		My kids? Oh hell no. I'm not going back for them.
+		I've got big plans for the future! Places I want to see!
+		I think I'll move to Singapore. Come find me if you're in the area.
+		I'll open the village gate. See you around!
