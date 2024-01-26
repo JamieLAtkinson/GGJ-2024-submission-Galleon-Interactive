@@ -1,0 +1,46 @@
+THE BEST GAME EVER
+
+Metroidvania about a lil guy in a very dark world going on a ridiculous quest to give people their smiles.
+
+Dark Setting
+simple combat
+Deadpan narrative that is totally ridiculous
+
+
+
+
+
+Matt:
+	Narrative
+	Some artwork (BASIC)
+	Main menu
+	UI
+
+
+
+Rand:
+	Character
+	Take Damage
+	Movement
+	Colliders (collision and overlap)
+	Attack
+
+
+
+Jamie:
+	Github admin
+	sorting files
+	Dialogue system
+	Enemies
+	NPCs
+
+
+
+Bailey:
+	Level
+
+
+
+Michael:
+	Music
+	SFX
