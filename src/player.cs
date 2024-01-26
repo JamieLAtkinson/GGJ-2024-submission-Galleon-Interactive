@@ -41,17 +41,16 @@ public partial class player : CharacterBody2D
    
 
 	[Export]
-	public int MaxHp = 10;
-	[Export]
+	public const int MaxHp = 10;
 	private int Hp = MaxHp;
 	[Export]
-	public int Damage = 10;
-	[signal]
+	public const int Damage = 10;
+	[Signal]
 	public delegate void MySignalEventHandler();
 
-	public int DamageTaken ()
+	public int DamageTaken(int DamageAmount)
 	{
-		return HpChanged(DamageAmount, Hp);
+		return HpChanged(DamageAmount);
 	
 	}
 
@@ -59,7 +58,7 @@ public partial class player : CharacterBody2D
 	private int HpChanged (int Change)
 	{
 		int Total = Hp - Change;
-		EmitSignal(MySignalEventHandler, Hp);
+		//EmitSignal(MySignalEventHandler, Hp);
 		return Total;
 
 
