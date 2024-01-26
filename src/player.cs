@@ -41,6 +41,7 @@ public partial class player : CharacterBody2D
    
 
 	[Export]
+<<<<<<< Updated upstream
 	public int MaxHp = 10;
 	[Export]
 	private int Hp = MaxHp;
@@ -52,6 +53,18 @@ public partial class player : CharacterBody2D
 	public int DamageTaken ()
 	{
 		return HpChanged(DamageAmount, Hp);
+=======
+	public static int MaxHp = 10;
+	private int Hp = MaxHp;
+	[Export]
+	public int Damage = 10;
+	[Signal]
+	public delegate void MySignalEventHandler(int Hp);
+
+	public int DamageTaken(int DamageAmount)
+	{
+		return HpChanged(DamageAmount);
+>>>>>>> Stashed changes
 	
 	}
 
@@ -59,7 +72,11 @@ public partial class player : CharacterBody2D
 	private int HpChanged (int Change)
 	{
 		int Total = Hp - Change;
+<<<<<<< Updated upstream
 		EmitSignal(MySignalEventHandler, Hp);
+=======
+		//EmitSignal(player.MySignalEventHandler, Hp);
+>>>>>>> Stashed changes
 		return Total;
 
 

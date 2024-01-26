@@ -12,11 +12,25 @@ script = ExtResource("1_d3x58")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qmmbi")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(10, -9)
-target_position = Vector2(0, 30)
-
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(3.8147e-06, 2.38419e-07)
 scale = Vector2(0.121445, 0.24)
 texture = ExtResource("2_ix0il")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(11, -9)
+target_position = Vector2(0, 30)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(11, 10)
+target_position = Vector2(9, 0)
+hit_from_inside = true
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+position = Vector2(-11, -8)
+target_position = Vector2(0, 29)
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+position = Vector2(-11, 10)
+target_position = Vector2(-7, 0)
+hit_from_inside = true
