@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cllme05y1o56d"]
+
+[ext_resource type="Script" path="res://src/EnemyBase.cs" id="1_566s8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
+
+[node name="EnemyBase" type="CharacterBody2D"]
+script = ExtResource("1_566s8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qmmbi")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(9, -9)
+target_position = Vector2(0, 30)
