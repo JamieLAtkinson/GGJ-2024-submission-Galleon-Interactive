@@ -51,17 +51,12 @@ public partial class player : CharacterBody2D
 	public int DamageTaken(int DamageAmount)
 	{
 		return HpChanged(DamageAmount);
-	
 	}
-
-	
 	private int HpChanged (int Change)
 	{
 		int Total = Hp - Change;
-		//EmitSignal(MySignalEventHandler, Hp);
+		//EmitSignal(player.MySignalEventHandler, Hp);
 		return Total;
-
-
 	}
 
 

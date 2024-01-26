@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx7fu8h7ucj7i"]
-
 [ext_resource type="Texture2D" uid="uid://gutbpo0q6htr" path="res://sprites/player.png" id="1_7puky"]
+[ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_20lek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huvqp"]
 texture = ExtResource("1_7puky")
@@ -18,6 +18,9 @@ texture_region_size = Vector2i(10, 10)
 [sub_resource type="TileSet" id="TileSet_myce0"]
 tile_size = Vector2i(20, 20)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 0
+physics_layer_1/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_huvqp")
 
 [node name="GameScene" type="Node2D"]
