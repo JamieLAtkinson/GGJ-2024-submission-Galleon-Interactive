@@ -33,6 +33,6 @@ public partial class ManagerScene : Node2D
 		
 	}
 	public void PlayMusic(AudioStreamMP3 music){
-		_MusicManager.ChangeTrack(music);
+		//_MusicManager.ChangeTrack(music);
 	}
 }
