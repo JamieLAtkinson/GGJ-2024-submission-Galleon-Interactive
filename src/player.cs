@@ -46,7 +46,8 @@ public partial class player : CharacterBody2D
 		if(Input.IsActionJustPressed("attack")){
 			GD.Print("boop");
 			Node2D _attack = (Node2D)attack.Instantiate();
-			_attack.Position = 20*LastDir;
+			_attack.Position = 80*LastDir;
+			_attack.Rotation = Vector2.Right.AngleTo(LastDir);
 			AddChild(_attack);
 		}
 	}
