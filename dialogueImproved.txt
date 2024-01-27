@@ -1,0 +1,75 @@
+[Hooded Old Man]:
+	You there, traveller. I need your help.
+	The miseromancers have stolen the smiles of the villagers!
+	I only just escaped with my smile.
+	Please help! Save our smiles.
+	Good luck hero.
+
+
+[Schrodinger The Cat]:
+	...
+	..........
+	Meow...?
+	You got me.
+	I might be Schrodinger, i might not, depends on when the box was opened.
+	I'm gonna sit here in this tree.
+	... (repeat forever)
+	
+[Matt]
+	*infinite jumble of words i'm not going to write with no spaces, box extends to fit it then it starts scrolling*
+	
+
+
+[MiseroMancer1] - before encountering enemies
+	Prepare to die fool, the smiles are ours!
+	(casts spell to right of screen)
+	(play ominous sound)
+	You begin to feel an urge to bash that evil minions skull in...
+
+[Box]
+	It is a box.
+	The box is empty.
+	You check the box... Empty.
+	This box is empty.
+	This box is still empty...
+	(inc box counter)
+	T H I S   B O X   I S   E M P T Y
+	Your box is evolving, you have recieved, 1 EMPTY BOX.
+	Leave...
+	Just Leave...
+	(repeat)
+
+[Box2]
+	...
+	It's Empty
+	I'm not lying
+	Not again...
+	(inc box counter)
+	Leave...
+	I'm not talking to you.
+	No.
+	Leave the box alone.
+	Fine, it has a false bottom.
+	The hidden compartment contains...
+	NOTHING
+	... (repeat)
+
+[Box3]
+	It's another box
+	you look inside the box
+	you look again
+	the box appears slightly larger on the inside than the outside
+	you peer inside again
+	it looks even larger this time
+	you look in again
+	it's definitely even larger this time
+	looks big enough to hold...
+	your attention
+	(inc box counter)
+	... (repeat)
+
+[Box4]
+	No...
+	If you click again i'm leaving...
+	... and taking your plot armour with me.
+	(narrator is disabled and damage taken doubles)
