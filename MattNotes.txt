@@ -1,0 +1,17 @@
+LOOK AT BOXES
+
+UI:
+	Way to hide the entire UI (global hide)
+	Dont bind health to anything. Have it just be a variable and then change it in editor to test it. 
+	
+
+
+Explain to rand:
+	Scrap events - Delete events
+	Dash
+	State machine - Changes animation based on state
+	Coyote Time
+	Attacks
+	Rotate attack based on character facing
+	Jamie will deal with coupling the hp to the UI. 
+	Bailey n Jamie will be back in a few hours

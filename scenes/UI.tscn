@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cqge36mjbl3q1"]
+[gd_scene load_steps=2 format=3 uid="uid://cqge36mjbl3q1"]
+
+[ext_resource type="Script" path="res://scenes/UI.cs" id="1_ttog6"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -7,3 +9,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ttog6")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 27.0
+offset_right = 365.0
+offset_bottom = 64.0
+max_value = 10.0
+step = 1.0
+value = 10.0
+show_percentage = false

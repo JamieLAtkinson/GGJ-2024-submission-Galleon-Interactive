@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi6wxdwhqxel4"]
+
+[ext_resource type="TileSet" uid="uid://ci25xsryqtmoa" path="res://sprites/TileSets/Cave.tres" id="1_pyhta"]
+[ext_resource type="Texture2D" uid="uid://bnuj7o23urrxd" path="res://sprites/TileSets/CaveTiles/ParallaxCave4.png" id="1_uiyup"]
+[ext_resource type="Texture2D" uid="uid://cf8y4aq5fjvhj" path="res://sprites/TileSets/CaveTiles/ParallaxCave3.png" id="2_ohdjd"]
+
+[node name="TeachingMap" type="Node2D"]
+
+[node name="ParallaxCave4" type="Sprite2D" parent="."]
+position = Vector2(577, 311)
+scale = Vector2(1, 1.12)
+texture = ExtResource("1_uiyup")
+
+[node name="ParallaxCave3" type="Sprite2D" parent="."]
+position = Vector2(577, 334)
+scale = Vector2(1, 0.72)
+texture = ExtResource("2_ohdjd")
+
+[node name="TileMap" type="TileMap" parent="."]
+rotation = 3.14159
+scale = Vector2(8.80343, -0.784808)
+tile_set = ExtResource("1_pyhta")
+format = 2
