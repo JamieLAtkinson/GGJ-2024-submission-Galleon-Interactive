@@ -17,7 +17,5 @@ scale = Vector2(1, 0.72)
 texture = ExtResource("2_ohdjd")
 
 [node name="TileMap" type="TileMap" parent="."]
-rotation = 3.14159
-scale = Vector2(8.80343, -0.784808)
 tile_set = ExtResource("1_pyhta")
 format = 2
