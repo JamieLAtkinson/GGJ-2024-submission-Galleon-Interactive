@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
 
 [node name="EnemyBase" type="CharacterBody2D"]
-collision_mask = 255
+collision_layer = 4
 script = ExtResource("1_d3x58")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,13 +22,13 @@ position = Vector2(10, -9)
 target_position = Vector2(0, 30)
 
 [node name="RayCast2D2" type="RayCast2D" parent="."]
-position = Vector2(20, -18)
-target_position = Vector2(0, 30)
+position = Vector2(10, 7)
+target_position = Vector2(8, 0)
 
 [node name="RayCast2D3" type="RayCast2D" parent="."]
-position = Vector2(10, -9)
+position = Vector2(-11, -9)
 target_position = Vector2(0, 30)
 
 [node name="RayCast2D4" type="RayCast2D" parent="."]
-position = Vector2(20, -18)
-target_position = Vector2(0, 30)
+position = Vector2(-9, 6)
+target_position = Vector2(-9, 0)

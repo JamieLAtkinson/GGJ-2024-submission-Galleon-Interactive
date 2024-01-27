@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://djvphkwlhy1v1"]
+
+[ext_resource type="Script" path="res://src/ManagerScene.cs" id="1_l07pb"]
+[ext_resource type="PackedScene" uid="uid://ih7qin48tcq2" path="res://scenes/player.tscn" id="2_3fs50"]
+[ext_resource type="PackedScene" uid="uid://dx7fu8h7ucj7i" path="res://scenes/GameScene.tscn" id="3_iviv4"]
+
+[node name="ManagerScene" type="Node2D"]
+script = ExtResource("1_l07pb")
+
+[node name="Player" parent="." instance=ExtResource("2_3fs50")]
+position = Vector2(345, 419)
+
+[node name="GameScene" parent="." instance=ExtResource("3_iviv4")]
