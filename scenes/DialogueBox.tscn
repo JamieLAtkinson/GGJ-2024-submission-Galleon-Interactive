@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0id12kckubo"]
+
+[ext_resource type="Script" path="res://src/DialogueBox.cs" id="1_6pej3"]
+[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="1_g28n4"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pej3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.76, 2.20636)
+texture = ExtResource("1_g28n4")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+scroll_following = true
+autowrap_mode = 0
+shortcut_keys_enabled = false
