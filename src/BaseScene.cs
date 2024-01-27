@@ -10,11 +10,7 @@ public partial class BaseScene : Node2D
 	{
 		GetParent<ManagerScene>().PlayMusic(music);
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+	
 	public void SwapScene(Door door){
 		GD.Print("2");
 		GetParent<ManagerScene>().SwapScene(door, this);
