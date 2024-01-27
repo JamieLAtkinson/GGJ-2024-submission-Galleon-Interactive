@@ -7,8 +7,7 @@ public partial class ManagerScene : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_MusicManager = (MusicManager)GetNode("AudioStreamPlayer");
-		_MusicManager.ChangeTrack((AudioStreamMP3)GD.Load("res://music/Diggy Diggy Hole.mp3"));
+		_MusicManager = (MusicManager)GetNode("MusicManager");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
