@@ -13,7 +13,12 @@ config_version=5
 config/name="GGJ2024"
 run/main_scene="res://scenes/ManagerScene.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
