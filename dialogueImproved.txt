@@ -71,5 +71,16 @@
 [Box4]
 	No...
 	If you click again i'm leaving...
+	(inc box counter)
 	... and taking your plot armour with me.
-	(narrator is disabled and damage taken doubles)
+	(narrator is disabled and damage taken doubles) -  replace narrator dialogue with *intense sulking*/other variants
+
+[Box5]
+	I'm still sulking
+	No, i don't want to talk about boxes
+	(narrator is enabled and damage taken is normal)
+	There is nothing in this one.
+	exactly like the other 4.
+	Give up.
+	I'm sick of boxes.
+	(inc box counter)
