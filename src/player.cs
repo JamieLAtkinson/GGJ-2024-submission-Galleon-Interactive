@@ -62,6 +62,9 @@ public partial class player : CharacterBody2D
 		//EmitSignal(player.MySignalEventHandler, Hp);
 		return Total;
 	}
-
+	
+	public void SetGlobalTransform(Transform2D transform){
+		Transform = transform;
+	}
 
 }
