@@ -3,9 +3,12 @@ using System;
 
 public partial class BaseScene : Node2D
 {
+	[Export]
+	public AudioStreamMP3 music;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		GetParent<ManagerScene>().PlayMusic(music);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

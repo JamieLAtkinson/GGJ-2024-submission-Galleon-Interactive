@@ -3,9 +3,12 @@ using System;
 
 public partial class ManagerScene : Node2D
 {
+	private MusicManager _MusicManager;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_MusicManager = (MusicManager)GetNode("AudioStreamPlayer");
+		_MusicManager.ChangeTrack((AudioStreamMP3)GD.Load("res://music/Diggy Diggy Hole.mp3"));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,5 +31,8 @@ public partial class ManagerScene : Node2D
 			}
 		}
 		
+	}
+	public void PlayMusic(AudioStreamMP3 music){
+		_MusicManager.ChangeTrack(music);
 	}
 }
