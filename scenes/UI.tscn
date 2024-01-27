@@ -7,3 +7,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 27.0
+offset_right = 365.0
+offset_bottom = 64.0
+max_value = 10.0
+step = 1.0
+value = 9.0
+show_percentage = false

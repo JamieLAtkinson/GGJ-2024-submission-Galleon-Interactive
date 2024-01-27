@@ -9,8 +9,17 @@ public partial class BaseScene : Node2D
 	public override void _Ready()
 	{
 		GetParent<ManagerScene>().PlayMusic(music);
+		progress = (ProgressBar)GetNode("ProgressBar");
+		UpdateBar(0);
 	}
+	
+	private ProgressBar progress;
 
+
+	public void UpdateBar(int val)
+	{
+		progress.Value = val;
+	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
