@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://m61ipn61vn1k"]
+
+[ext_resource type="Script" path="res://src/BaseScene.cs" id="1_djfp6"]
+[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_q1gmm"]
+[ext_resource type="PackedScene" uid="uid://ddwvxrw6fdbs1" path="res://scenes/SpawnPoint.tscn" id="3_t6v72"]
+
+[node name="GameScene2" type="Node2D"]
+script = ExtResource("1_djfp6")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1060, 82)
+texture = ExtResource("2_q1gmm")
+
+[node name="SpawnPoint" parent="." instance=ExtResource("3_t6v72")]
+position = Vector2(456, 110)

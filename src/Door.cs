@@ -18,7 +18,11 @@ public partial class Door : Node2D
 	}
 	private void _on_area_2d_body_entered(Node2D body)
 	{
-		GetParent<BaseScene>().SwapScene(this);
+		GD.Print("1");
+		var parent = GetParent();
+		GD.Print(parent.GetType());
+		var parent2 = (BaseScene)parent;
+		parent2.SwapScene(this);
 	}
 }
 

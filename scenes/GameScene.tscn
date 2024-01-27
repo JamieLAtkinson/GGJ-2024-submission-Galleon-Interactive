@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx7fu8h7ucj7i"]
+[gd_scene load_steps=7 format=3 uid="uid://dx7fu8h7ucj7i"]
 
+[ext_resource type="Script" path="res://src/BaseScene.cs" id="1_c0s1o"]
 [ext_resource type="Texture2D" uid="uid://b60tyjhfe37uj" path="res://sprites/TileSets/AnotherTileset/Assets.png" id="1_egwpq"]
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_2mssp"]
+[ext_resource type="PackedScene" uid="uid://c64ajluatg355" path="res://scenes/Door.tscn" id="4_yb32m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3b5a"]
 texture = ExtResource("1_egwpq")
@@ -79,6 +81,7 @@ physics_layer_0/collision_mask = 0
 sources/2 = SubResource("TileSetAtlasSource_d3b5a")
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource("1_c0s1o")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_myce0")
@@ -90,3 +93,7 @@ position = Vector2(507, 584)
 
 [node name="EnemyBase2" parent="." instance=ExtResource("2_2mssp")]
 position = Vector2(703, 584)
+
+[node name="Door" parent="." instance=ExtResource("4_yb32m")]
+position = Vector2(35, 573)
+target = "GameScene2.tscn"

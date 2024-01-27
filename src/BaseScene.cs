@@ -13,6 +13,7 @@ public partial class BaseScene : Node2D
 	{
 	}
 	public void SwapScene(Door door){
+		GD.Print("2");
 		GetParent<ManagerScene>().SwapScene(door, this);
 	}
 	

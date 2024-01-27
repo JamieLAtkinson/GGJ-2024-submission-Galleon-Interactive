@@ -13,6 +13,7 @@ public partial class ManagerScene : Node2D
 	{
 	}
 	public void SwapScene(Door door,Node rem){
+		GD.Print("3");
 		var scene = ResourceLoader.Load<PackedScene>($"res://scenes/{door.target}").Instantiate();
 		AddChild(scene);
 		RemoveChild(rem);
