@@ -17,6 +17,7 @@ public partial class EnemyBase : CharacterBody2D
 
 	public override void _Ready()
 	{
+		Hp = MaxHp;
 		raycast = (RayCast2D)GetNode("RayCast2D");
 		raycast2 = (RayCast2D)GetNode("RayCast2D2");
 		raycast3 = (RayCast2D)GetNode("RayCast2D3");
