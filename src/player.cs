@@ -130,6 +130,18 @@ public partial class player : CharacterBody2D
 			GD.Print(Hp);
 		}
 	}
+	private string[] Dialogue = new string[];
+	private int DialoguePointer = 0;
+	public void SetNPC(string[] dialogue){
+		Dialogue = dialogue;
+	}
+	public void RemNPC(){
+		Dialogue = new string[];
+		DialoguePointer = 0;
+	}
+	private void ReadDialogue(){
+		
+	}
 
 }
 

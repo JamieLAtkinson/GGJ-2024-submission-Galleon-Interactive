@@ -3,9 +3,12 @@ using System;
 
 public partial class Npc : CharacterBody2D
 {
+	[Export]
+	string[] dialogue;
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 	private RichTextLabel _label;
+	private player pl;
 
 	public override void _Ready(){
 		_label = GetNode<RichTextLabel>("RichTextLabel");
@@ -24,10 +27,13 @@ public partial class Npc : CharacterBody2D
 	private void _on_area_2d_body_entered(Node2D body)
 	{
 		_label.Visible = true;
+		pl = (player)body;
+		pl.SetNPC(dialogue);
 	}
 	private void _on_area_2d_body_exited(Node2D body)
 	{
 		_label.Visible = false;
+		pl.RemNPC();
 	}
 }
 
