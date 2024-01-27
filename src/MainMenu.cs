@@ -14,7 +14,7 @@ public partial class MainMenu : Control
 	}
 	private void _on_button_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://scenes/GameScene.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/ManagerScene.tscn");
 	}
 	
 	private void _on_button_2_pressed()

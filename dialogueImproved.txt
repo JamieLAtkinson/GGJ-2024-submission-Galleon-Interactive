@@ -5,7 +5,6 @@
 	Please help! Save our smiles.
 	Good luck hero.
 
-
 [Schrodinger The Cat]:
 	...
 	..........
@@ -14,17 +13,24 @@
 	I might be Schrodinger, i might not, depends on when the box was opened.
 	I'm gonna sit here in this tree.
 	... (repeat forever)
-	
+
 [Matt]
 	*infinite jumble of words i'm not going to write with no spaces, box extends to fit it then it starts scrolling*
-	
-
 
 [MiseroMancer1] - before encountering enemies
 	Prepare to die fool, the smiles are ours!
 	(casts spell to right of screen)
 	(play ominous sound)
 	You begin to feel an urge to bash that evil minions skull in...
+
+[BoxMaker]
+	He stares intensely at his boxes
+	I feel like he doesn't want to talk to you
+	Really, stop pestering the poor man
+	I can't watch this any more
+	You sick monster
+	Stop tormenting him (repeat)
+	STOP TORMENTING ME (IF ALL BOXES ATTAINED)
 
 [Box]
 	It is a box.
@@ -37,7 +43,7 @@
 	Your box is evolving, you have recieved, 1 EMPTY BOX.
 	Leave...
 	Just Leave...
-	(repeat)
+	... (repeat)
 
 [Box2]
 	...
@@ -84,3 +90,4 @@
 	Give up.
 	I'm sick of boxes.
 	(inc box counter)
+	...(repeat)
