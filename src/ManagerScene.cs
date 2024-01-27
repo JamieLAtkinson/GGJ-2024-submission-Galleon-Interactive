@@ -27,6 +27,7 @@ public partial class ManagerScene : Node2D
 				var nodes = GetTree().GetNodesInGroup("player")[0];
 				var pnode = (player)nodes;
 				pnode.SetGlobalTransform(pos);
+				pnode.ZeroV = true;
 				break;
 			}
 		}

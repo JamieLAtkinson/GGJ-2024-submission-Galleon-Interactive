@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ih7qin48tcq2"]
+[gd_scene load_steps=5 format=3 uid="uid://ih7qin48tcq2"]
 
 [ext_resource type="Script" path="res://src/player.cs" id="1_cmpk2"]
+[ext_resource type="PackedScene" uid="uid://iwpn42b4isir" path="res://scenes/Attack.tscn" id="2_btn0h"]
 [ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_gdpt1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_48cna"]
@@ -8,6 +9,7 @@
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 8
 script = ExtResource("1_cmpk2")
+attack = ExtResource("2_btn0h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_48cna")
