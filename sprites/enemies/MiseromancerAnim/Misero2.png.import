@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbbgfvkh4t0xr"
-path="res://.godot/imported/atlas.png-4e2bea8721f50c9ace4cdd95021cd105.ctex"
+uid="uid://cllw8qsw6upmd"
+path="res://.godot/imported/Misero2.png-7bb1a524f102fed7a552148ba101caa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/enemies/atlas.png"
-dest_files=["res://.godot/imported/atlas.png-4e2bea8721f50c9ace4cdd95021cd105.ctex"]
+source_file="res://sprites/enemies/MiseromancerAnim/Misero2.png"
+dest_files=["res://.godot/imported/Misero2.png-7bb1a524f102fed7a552148ba101caa4.ctex"]
 
 [params]
 
