@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://csqtmo46rdns0"]
+
+[ext_resource type="Script" path="res://src/Npc.cs" id="1_eprdr"]
+[ext_resource type="Texture2D" uid="uid://gutbpo0q6htr" path="res://sprites/player.png" id="2_043cc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npsmw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciifr"]
+size = Vector2(200, 173)
+
+[node name="Npc" type="CharacterBody2D"]
+collision_layer = 16
+script = ExtResource("1_eprdr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.48, 4.96)
+shape = SubResource("RectangleShape2D_npsmw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.221203, 0.238962)
+texture = ExtResource("2_043cc")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_ciifr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -63.0
+offset_top = -82.0
+offset_right = 81.0
+offset_bottom = -57.0
+text = "Press E to Interact"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
