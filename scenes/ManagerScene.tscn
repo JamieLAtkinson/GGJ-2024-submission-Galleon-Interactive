@@ -1,13 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://coj1a87u53fl4"]
+[gd_scene load_steps=10 format=3 uid="uid://coj1a87u53fl4"]
 
 [ext_resource type="Script" path="res://src/ManagerScene.cs" id="1_l07pb"]
 [ext_resource type="PackedScene" uid="uid://ih7qin48tcq2" path="res://scenes/player.tscn" id="2_3fs50"]
 [ext_resource type="PackedScene" uid="uid://dx7fu8h7ucj7i" path="res://scenes/GameScene.tscn" id="3_iviv4"]
 [ext_resource type="Script" path="res://src/MusicManager.cs" id="4_076cc"]
+[ext_resource type="AudioStream" uid="uid://g2ghmk24qlh2" path="res://sfx/HighTone.mp3" id="5_vo08p"]
+[ext_resource type="AudioStream" uid="uid://ctwnljc371dh8" path="res://sfx/LowTone.mp3" id="6_u0j0l"]
 
 [sub_resource type="Animation" id="Animation_gmoql"]
 resource_name = "fade1to2"
-length = 0.5
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,8 +17,8 @@ tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 6.5),
+"transitions": PackedFloat32Array(1, 2.07053),
 "update": 0,
 "values": [0.0, -80.0]
 }
@@ -27,10 +29,10 @@ tracks/1/path = NodePath("AudioStreamPlayer2:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 2.07053),
 "update": 0,
-"values": [-80.0, 0.0]
+"values": [-40.0, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -56,7 +58,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(1, 5.09825),
 "update": 0,
 "values": [-80.0, 0.0]
 }
@@ -68,7 +70,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(1, 9.51364),
 "update": 0,
 "values": [0.0, -80.0]
 }
@@ -101,10 +103,14 @@ position = Vector2(345, 419)
 
 [node name="MusicManager" type="Node2D" parent="."]
 script = ExtResource("4_076cc")
+tracks = Array[AudioStreamMP3]([ExtResource("5_vo08p"), ExtResource("6_u0j0l")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("5_vo08p")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
+stream = ExtResource("6_u0j0l")
+volume_db = -80.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MusicManager"]
 libraries = {
