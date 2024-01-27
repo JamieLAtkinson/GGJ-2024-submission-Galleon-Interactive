@@ -21,9 +21,17 @@ public partial class player : CharacterBody2D
 	private Vector2 _dashDir;
 	[Export]
 	public float dashSpeed = 700f;
+	[Export]
+	public float iFrameDuration = 0.05f;
+	private float _iFrames = 0f;
+	private Vector2 LastDir;
+	[Export]
+	public PackedScene attack;
+	public bool ZeroV = false;
 	
 	public override void _Ready(){
 		Hp = MaxHp;
+		
 	}
 	public override void _Process(double delta){
 		if(_ctime>=0){
@@ -31,6 +39,15 @@ public partial class player : CharacterBody2D
 		}
 		if(_dashTime>=0){
 			_dashTime -= (float)delta;
+		}
+		if(_iFrames>0){
+			_iFrames -= (float)delta;
+		}
+		if(Input.IsActionJustPressed("attack")){
+			GD.Print("boop");
+			Node2D _attack = (Node2D)attack.Instantiate();
+			_attack.Position = 20*LastDir;
+			AddChild(_attack);
 		}
 	}
 	
@@ -59,6 +76,7 @@ public partial class player : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
+			LastDir = direction;
 		}
 		else
 		{
@@ -72,8 +90,11 @@ public partial class player : CharacterBody2D
 		if(_dashTime>0){
 			velocity.X += _dashDir.X * dashSpeed;
 		}
-
 		Velocity = velocity;
+		if(ZeroV){
+			Velocity = Vector2.Zero;
+			ZeroV = false;
+		}
 		MoveAndSlide();
 	}
 
@@ -84,14 +105,13 @@ public partial class player : CharacterBody2D
 	private int Hp;
 	[Export]
 	public const int Damage = 10;
-	public int DamageTaken(int DamageAmount)
+	public void DamageTaken(int DamageAmount)
 	{
-		return HpChanged(DamageAmount);
+		HpChanged(DamageAmount);
 	}
-	private int HpChanged (int Change)
+	private void HpChanged (int Change)
 	{
-		int Total = Hp - Change;
-		return Total;
+		Hp = Hp - Change;
 	}
 	public int GetHp(){
 		return Hp;
@@ -102,9 +122,11 @@ public partial class player : CharacterBody2D
 	}
 	private void _on_area_2d_body_entered(Node2D body)
 	{
-		if(body is EnemyBase){
-			EnemyBase caller = body as EnemyBase
-			DamageTaken(caller.Damage)
+		if(body is EnemyBase && _iFrames<=0){
+			EnemyBase caller = body as EnemyBase;
+			DamageTaken(caller.Damage);
+			_iFrames = iFrameDuration;
+			GD.Print(Hp);
 		}
 	}
 
