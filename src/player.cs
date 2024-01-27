@@ -144,7 +144,6 @@ public partial class player : CharacterBody2D
 	{
 		if(body is EnemyBase && _iFrames<=0){
 			EnemyBase caller = body as EnemyBase;
-			GD.Print(Hp);
 			DamageTaken(caller.Damage);
 			_iFrames = iFrameDuration;
 			
