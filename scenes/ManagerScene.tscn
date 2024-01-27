@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ih7qin48tcq2" path="res://scenes/player.tscn" id="2_3fs50"]
 [ext_resource type="PackedScene" uid="uid://dx7fu8h7ucj7i" path="res://scenes/GameScene.tscn" id="3_iviv4"]
 [ext_resource type="Script" path="res://src/MusicManager.cs" id="4_076cc"]
-[ext_resource type="AudioStream" uid="uid://g2ghmk24qlh2" path="res://sfx/HighTone.mp3" id="5_vo08p"]
-[ext_resource type="AudioStream" uid="uid://ctwnljc371dh8" path="res://sfx/LowTone.mp3" id="6_u0j0l"]
+[ext_resource type="AudioStream" uid="uid://c4mhxfhgn65t6" path="res://sfx/DemoFirst.mp3" id="7_dmlb8"]
+[ext_resource type="AudioStream" uid="uid://cbybet0mcptcm" path="res://sfx/DemoSecond.mp3" id="8_w7avr"]
 
 [sub_resource type="Animation" id="Animation_gmoql"]
 resource_name = "fade1to2"
@@ -103,13 +103,13 @@ position = Vector2(345, 419)
 
 [node name="MusicManager" type="Node2D" parent="."]
 script = ExtResource("4_076cc")
-tracks = Array[AudioStreamMP3]([ExtResource("5_vo08p"), ExtResource("6_u0j0l")])
+tracks = Array[AudioStreamMP3]([ExtResource("7_dmlb8"), ExtResource("8_w7avr")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("5_vo08p")
+stream = ExtResource("7_dmlb8")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("6_u0j0l")
+stream = ExtResource("8_w7avr")
 volume_db = -80.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MusicManager"]
