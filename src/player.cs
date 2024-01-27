@@ -9,9 +9,29 @@ public partial class player : CharacterBody2D
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	[Export]
+	public float coyotetime = 0.1f;
+	private float _ctime = 0f;
+	private bool _jumps = false;
+	private bool _dashCD = false;
+	private float _dashTime = 0f;
+	[Export]
+	public float dashLength = 0.3f;
+	private bool _canDash =false;
+	private Vector2 _dashDir;
+	[Export]
+	public float dashSpeed = 700f;
 	
 	public override void _Ready(){
 		Hp = MaxHp;
+	}
+	public override void _Process(double delta){
+		if(_ctime>=0){
+		_ctime -= (float)delta;
+		}
+		if(_dashTime>=0){
+			_dashTime -= (float)delta;
+		}
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -21,10 +41,17 @@ public partial class player : CharacterBody2D
 		// Add the gravity.
 		if (!IsOnFloor())
 			velocity.Y += gravity * (float)delta;
+		else{
+			_ctime = coyotetime;
+			_jumps =false;
+			_canDash = true;
+		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("jump") && IsOnFloor())
+		if (Input.IsActionJustPressed("jump") && (IsOnFloor() || (_ctime>0 && !_jumps))){
 			velocity.Y = JumpVelocity;
+			_jumps = true;
+		}
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
@@ -36,6 +63,14 @@ public partial class player : CharacterBody2D
 		else
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+		}
+		if(Input.IsActionJustPressed("dash")&&_dashTime<0 && _canDash){
+			_dashTime = dashLength;
+			_canDash = false;
+			_dashDir = direction;
+		}
+		if(_dashTime>0){
+			velocity.X += _dashDir.X * dashSpeed;
 		}
 
 		Velocity = velocity;
@@ -49,9 +84,6 @@ public partial class player : CharacterBody2D
 	private int Hp;
 	[Export]
 	public const int Damage = 10;
-	[Signal]
-	public delegate void MySignalEventHandler();
-
 	public int DamageTaken(int DamageAmount)
 	{
 		return HpChanged(DamageAmount);
@@ -59,12 +91,24 @@ public partial class player : CharacterBody2D
 	private int HpChanged (int Change)
 	{
 		int Total = Hp - Change;
-		//EmitSignal(player.MySignalEventHandler, Hp);
 		return Total;
+	}
+	public int GetHp(){
+		return Hp;
 	}
 	
 	public void SetGlobalTransform(Transform2D transform){
 		Transform = transform;
 	}
+	private void _on_area_2d_body_entered(Node2D body)
+	{
+		if(body is EnemyBase){
+			EnemyBase caller = body as EnemyBase
+			DamageTaken(caller.Damage)
+		}
+	}
 
 }
+
+
+

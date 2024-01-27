@@ -10,7 +10,9 @@ public partial class EnemyBase : CharacterBody2D
 	private bool right = true;
 	[Export]
 	private int MaxHp = 10;
-	private int Hp; 
+	private int Hp;
+	[Export]
+	public int damage = 2;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
