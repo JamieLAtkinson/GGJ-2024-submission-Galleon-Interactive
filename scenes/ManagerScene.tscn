@@ -15,10 +15,10 @@ tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [0.0, -80.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -27,10 +27,10 @@ tracks/1/path = NodePath("AudioStreamPlayer2:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [-80.0, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -47,6 +47,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_ltpij"]
 resource_name = "fade2to1"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -54,10 +55,10 @@ tracks/0/path = NodePath("AudioStreamPlayer:volume_db")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [-80.0, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -66,10 +67,10 @@ tracks/1/path = NodePath("AudioStreamPlayer2:volume_db")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": []
+"values": [0.0, -80.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
