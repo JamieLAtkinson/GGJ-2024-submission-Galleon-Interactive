@@ -50,6 +50,13 @@ public partial class player : CharacterBody2D
 			_attack.Rotation = Vector2.Right.AngleTo(LastDir);
 			AddChild(_attack);
 		}
+		if(Input.IsActionJustPressed("interact")){
+			GD.Print(Dialogue);
+			if (Dialogue != new string[0]){
+				GD.Print("Beeep");
+				ReadDialogue();
+			}
+		}
 	}
 	
 	public override void _PhysicsProcess(double delta)
@@ -113,6 +120,7 @@ public partial class player : CharacterBody2D
 	private void HpChanged (int Change)
 	{
 		Hp = Hp - Change;
+		ui.UpdateBar(Hp);
 	}
 	public int GetHp(){
 		return Hp;
@@ -130,17 +138,27 @@ public partial class player : CharacterBody2D
 			GD.Print(Hp);
 		}
 	}
-	private string[] Dialogue = new string[];
+	private string[] Dialogue = new string[0];
 	private int DialoguePointer = 0;
+	public DialogueBox DB;
+	public UI ui;
 	public void SetNPC(string[] dialogue){
 		Dialogue = dialogue;
 	}
 	public void RemNPC(){
-		Dialogue = new string[];
+		Dialogue = new string[0];
 		DialoguePointer = 0;
+		DB.Hide();
 	}
 	private void ReadDialogue(){
-		
+		GD.Print(DB);
+		DB.Show();
+		GD.Print("beepboop");
+		DB.AppendText(Dialogue[DialoguePointer]);
+		DialoguePointer++;
+		if(DialoguePointer == Dialogue.Length){
+			DialoguePointer--;
+		}
 	}
 
 }

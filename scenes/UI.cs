@@ -7,11 +7,11 @@ public partial class UI : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		progress = (ProgressBar)GetNode("ProgressBar");
+		progress = (TextureProgressBar)GetNode("TextureProgressBar");
 		UpdateBar(1);
 	}
 
-	private ProgressBar progress;
+	private TextureProgressBar progress;
 
 	public void UpdateBar(int val)
 	{

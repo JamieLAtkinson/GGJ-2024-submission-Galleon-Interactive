@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqge36mjbl3q1"]
+[gd_scene load_steps=4 format=3 uid="uid://cqge36mjbl3q1"]
 
 [ext_resource type="Script" path="res://scenes/UI.cs" id="1_ttog6"]
+[ext_resource type="Texture2D" uid="uid://ciqp07ox77p73" path="res://sprites/HeartBarEmpty.png" id="2_h43bv"]
+[ext_resource type="Texture2D" uid="uid://cip3g5q8lb22n" path="res://sprites/HeartBar.png" id="3_krb1i"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -11,13 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ttog6")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 27.0
-offset_right = 365.0
-offset_bottom = 64.0
+offset_left = 13.0
+offset_top = 606.0
+offset_right = 87.0
+offset_bottom = 653.0
+scale = Vector2(2.22443, 2.34927)
 max_value = 10.0
-step = 1.0
-value = 10.0
-show_percentage = false
+value = 5.0
+texture_under = ExtResource("2_h43bv")
+texture_progress = ExtResource("3_krb1i")

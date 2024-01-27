@@ -8,6 +8,10 @@ public partial class ManagerScene : Node2D
 	public override void _Ready()
 	{
 		_MusicManager = (MusicManager)GetNode("MusicManager");
+		var nodes = GetTree().GetNodesInGroup("player")[0];
+		var pnode = (player)nodes;
+		pnode.ui = (UI)GetNode("UI");
+		pnode.DB = (DialogueBox)GetNode("DialogueBox");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
