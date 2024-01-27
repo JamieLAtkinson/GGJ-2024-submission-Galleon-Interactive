@@ -8,7 +8,6 @@ public partial class UI : Control
 	public override void _Ready()
 	{
 		progress = (TextureProgressBar)GetNode("TextureProgressBar");
-		UpdateBar(1);
 	}
 
 	private TextureProgressBar progress;

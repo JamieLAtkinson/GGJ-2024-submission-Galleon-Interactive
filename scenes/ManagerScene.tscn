@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://coj1a87u53fl4"]
+[gd_scene load_steps=13 format=3 uid="uid://coj1a87u53fl4"]
 
 [ext_resource type="Script" path="res://src/ManagerScene.cs" id="1_l07pb"]
 [ext_resource type="PackedScene" uid="uid://ih7qin48tcq2" path="res://scenes/player.tscn" id="2_3fs50"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c4mhxfhgn65t6" path="res://sfx/DemoFirst.mp3" id="7_dmlb8"]
 [ext_resource type="PackedScene" uid="uid://cqge36mjbl3q1" path="res://scenes/UI.tscn" id="8_lbqq0"]
 [ext_resource type="AudioStream" uid="uid://cbybet0mcptcm" path="res://sfx/DemoSecond.mp3" id="8_w7avr"]
+[ext_resource type="PackedScene" uid="uid://cw7cvruqvf352" path="res://scenes/Death.tscn" id="9_2lxyi"]
 
 [sub_resource type="Animation" id="Animation_gmoql"]
 resource_name = "fade1to2"
@@ -123,3 +124,10 @@ libraries = {
 visible = false
 
 [node name="Ui" parent="." instance=ExtResource("8_lbqq0")]
+
+[node name="Death" parent="." instance=ExtResource("9_2lxyi")]
+visible = false
+offset_left = -3.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = -1.0

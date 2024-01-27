@@ -28,12 +28,16 @@ public partial class player : CharacterBody2D
 	[Export]
 	public PackedScene attack;
 	public bool ZeroV = false;
-	
+	public Control DS;
+	private bool dead = false;
 	public override void _Ready(){
 		Hp = MaxHp;
 		
 	}
 	public override void _Process(double delta){
+		if(dead){
+			return;
+		}
 		if(_ctime>=0){
 		_ctime -= (float)delta;
 		}
@@ -61,6 +65,9 @@ public partial class player : CharacterBody2D
 	
 	public override void _PhysicsProcess(double delta)
 	{
+		if(dead){
+			return;
+		}
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -116,6 +123,10 @@ public partial class player : CharacterBody2D
 	public void DamageTaken(int DamageAmount)
 	{
 		HpChanged(DamageAmount);
+		if(Hp <= 0){
+			DS.Show();
+			dead = true;
+		}
 	}
 	private void HpChanged (int Change)
 	{
@@ -133,9 +144,10 @@ public partial class player : CharacterBody2D
 	{
 		if(body is EnemyBase && _iFrames<=0){
 			EnemyBase caller = body as EnemyBase;
+			GD.Print(Hp);
 			DamageTaken(caller.Damage);
 			_iFrames = iFrameDuration;
-			GD.Print(Hp);
+			
 		}
 	}
 	private string[] Dialogue = new string[0];

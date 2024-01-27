@@ -37,6 +37,7 @@ public partial class EnemyBase : CharacterBody2D
 	
 	public void damage(int damage){
 		Hp = Hp-damage;
+	
 		if(Hp<0){
 			die();
 		}
