@@ -4,7 +4,7 @@ using System;
 public partial class MusicManager : Node2D
 {
 	[Export]
-	public AudioStream[] tracks;
+	public AudioStreamMP3[] tracks;
 	private AudioStreamPlayer player1;
 	private AudioStreamPlayer player2;
 	private AnimationPlayer anim;
@@ -20,6 +20,8 @@ public partial class MusicManager : Node2D
 	}
 	public void Process(){
 		GD.Print(curStream);
+		GD.Print(player1.GetPlaybackPosition());
+		GD.Print(player2.GetPlaybackPosition());
 		if(ply1){
 			if(player1.GetPlaybackPosition()==0){
 				player1.Play();
