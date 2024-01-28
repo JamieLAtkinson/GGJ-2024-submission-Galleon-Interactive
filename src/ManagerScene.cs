@@ -34,6 +34,7 @@ public partial class ManagerScene : Node2D
 				var pnode = (player)nodes;
 				pnode.SetGlobalTransform(pos);
 				pnode.ZeroV = true;
+				pnode.DamageTaken(-10);
 				break;
 			}
 		}

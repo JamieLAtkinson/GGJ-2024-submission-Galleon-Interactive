@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://src/MiseroMancerEnemy.cs" id="1_gpxcy"]
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_bh8hq"]
-[ext_resource type="Texture2D" uid="uid://bduek8fudya07" path="res://sprites/enemies/MiseromancerAnim/Misero1.png" id="3_l7qfg"]
-[ext_resource type="Texture2D" uid="uid://cllw8qsw6upmd" path="res://sprites/enemies/MiseromancerAnim/Misero2.png" id="4_x6f6y"]
-[ext_resource type="Texture2D" uid="uid://ckrqhap4napmm" path="res://sprites/enemies/MiseromancerAnim/Misero3.png" id="5_q2leu"]
+[ext_resource type="Texture2D" path="res://sprites/enemies/MiseromancerAnim/Misero1.png" id="3_l7qfg"]
+[ext_resource type="Texture2D" path="res://sprites/enemies/MiseromancerAnim/Misero2.png" id="4_x6f6y"]
+[ext_resource type="Texture2D" path="res://sprites/enemies/MiseromancerAnim/Misero3.png" id="5_q2leu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
 

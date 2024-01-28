@@ -12,6 +12,7 @@ public partial class EnemyBase : CharacterBody2D
 	private int Hp;
 	[Export]
 	public int Damage = 1;
+	private AnimatedSprite2D x;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -24,6 +25,8 @@ public partial class EnemyBase : CharacterBody2D
 		raycast3 = (RayCast2D)GetNode("RayCast2D3");
 		raycast4 = (RayCast2D)GetNode("RayCast2D4");
 		Velocity = new Vector2(100,0);
+		x = (AnimatedSprite2D)GetNode("AnimatedSprite2D");
+		x.Play();
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -31,6 +34,8 @@ public partial class EnemyBase : CharacterBody2D
 		Velocity = new Vector2(Velocity.X,gravity+Velocity.Y);
 		if (!raycast.IsColliding() || !raycast3.IsColliding()|| raycast2.IsColliding() || raycast4.IsColliding()){
 			Velocity = new Vector2(Velocity.X*-1,Velocity.Y);
+			x.FlipV = !x.FlipV;
+			x.FlipH = !x.FlipH;
 		}
 		MoveAndSlide();
 	}
