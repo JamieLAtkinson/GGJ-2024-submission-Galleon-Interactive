@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0id12kckubo"]
 
 [ext_resource type="Script" path="res://src/DialogueBox.cs" id="1_6pej3"]
-[ext_resource type="Texture2D" uid="uid://c3nf58ny2pe6r" path="res://sprites/TextBoxFull.png" id="2_3q767"]
+[ext_resource type="Texture2D" path="res://sprites/TextBoxFull.png" id="2_3q767"]
 
 [node name="DialogueBox" type="Control"]
 layout_mode = 3

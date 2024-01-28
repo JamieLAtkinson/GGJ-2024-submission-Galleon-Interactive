@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckw24i0qeksh4"]
+[gd_scene load_steps=6 format=3 uid="uid://fc7pxs5dpl2a"]
 
 [ext_resource type="Texture2D" path="res://sprites/enemies/MiseromancerAnim/Misero1.png" id="1_4usi3"]
 [ext_resource type="Script" path="res://src/miseromancer.cs" id="1_onbur"]
