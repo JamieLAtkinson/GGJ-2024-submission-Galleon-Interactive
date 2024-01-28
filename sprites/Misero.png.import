@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkuxgb5xschh3"
-path="res://.godot/imported/PlayerAnim3.png-90cfea78244bfb33e1f97c14fbe314b5.ctex"
+uid="uid://c7l4n15gwesi8"
+path="res://.godot/imported/Misero.png-97323cb37617c1b7fc4a21a0824da1c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/PlayerAnim3.png"
-dest_files=["res://.godot/imported/PlayerAnim3.png-90cfea78244bfb33e1f97c14fbe314b5.ctex"]
+source_file="res://sprites/Misero.png"
+dest_files=["res://.godot/imported/Misero.png-97323cb37617c1b7fc4a21a0824da1c2.ctex"]
 
 [params]
 
