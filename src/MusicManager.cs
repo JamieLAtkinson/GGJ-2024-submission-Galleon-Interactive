@@ -4,7 +4,7 @@ using System;
 public partial class MusicManager : Node2D
 {
 	[Export]
-	public AudioStreamMP3[] tracks;
+	public AudioStream[] tracks;
 	private AudioStreamPlayer player1;
 	private AudioStreamPlayer player2;
 	private AnimationPlayer anim;
@@ -19,6 +19,7 @@ public partial class MusicManager : Node2D
 		ChangeTrack(0);
 	}
 	public void Process(){
+		GD.Print(curStream);
 		if(ply1){
 			if(player1.GetPlaybackPosition()==0){
 				player1.Play();
@@ -40,12 +41,14 @@ public partial class MusicManager : Node2D
 		if(ply1){
 			player2.Stream = tracks[index];
 			player2.Play();
+			player2.Seek(player1.GetPlaybackPosition());
 			ply1 = false;
 			anim.Play("fade1to2");
 		}
 		else{
 			player1.Stream = tracks[index];
 			player1.Play();
+			player1.Seek(player2.GetPlaybackPosition());
 			ply1 = true;
 			anim.Play("fade2to1");
 		}

@@ -128,17 +128,14 @@ public partial class player : CharacterBody2D
 		if(Hp > 8){
 			MM.ChangeTrack(0);
 		}
-		if(Hp <= 8 && Hp > 6){
+		if(Hp <= 8 && Hp > 5){
 			MM.ChangeTrack(1);
 		}
-		if(Hp <= 6 && Hp > 4){
+		if(Hp <= 5 && Hp > 2){
 			MM.ChangeTrack(2);
 		}
-		if(Hp <= 4 && Hp > 2){
-			MM.ChangeTrack(3);
-		}
 		if(Hp <= 2 && Hp > 0){
-			MM.ChangeTrack(4);
+			MM.ChangeTrack(3);
 		}
 		if(Hp <= 0){
 			DS.Show();

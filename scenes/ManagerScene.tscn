@@ -1,14 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://coj1a87u53fl4"]
+[gd_scene load_steps=16 format=3 uid="uid://coj1a87u53fl4"]
 
 [ext_resource type="Script" path="res://src/ManagerScene.cs" id="1_l07pb"]
 [ext_resource type="PackedScene" uid="uid://ih7qin48tcq2" path="res://scenes/player.tscn" id="2_3fs50"]
 [ext_resource type="PackedScene" uid="uid://dx7fu8h7ucj7i" path="res://scenes/GameScene.tscn" id="3_iviv4"]
 [ext_resource type="Script" path="res://src/MusicManager.cs" id="4_076cc"]
+[ext_resource type="AudioStream" uid="uid://ck6imu5b7j5op" path="res://music/InGameMusicFullHealthLoop.mp3" id="5_hn5el"]
+[ext_resource type="AudioStream" uid="uid://mcyy74oks6t3" path="res://music/InGameMusicOneScratchLoop.mp3" id="6_mjgo5"]
 [ext_resource type="PackedScene" uid="uid://c0id12kckubo" path="res://scenes/DialogueBox.tscn" id="7_bqs4d"]
-[ext_resource type="AudioStream" uid="uid://c4mhxfhgn65t6" path="res://sfx/DemoFirst.mp3" id="7_dmlb8"]
+[ext_resource type="AudioStream" uid="uid://c2ovmg3xrmxjd" path="res://music/InGameMusicHalfHealthLoop.mp3" id="7_fd10w"]
 [ext_resource type="PackedScene" uid="uid://cqge36mjbl3q1" path="res://scenes/UI.tscn" id="8_lbqq0"]
-[ext_resource type="AudioStream" uid="uid://cbybet0mcptcm" path="res://sfx/DemoSecond.mp3" id="8_w7avr"]
+[ext_resource type="AudioStream" uid="uid://hurscmorwifo" path="res://music/InGameMusicOneHeartLoop.mp3" id="8_xqs8g"]
 [ext_resource type="PackedScene" uid="uid://cw7cvruqvf352" path="res://scenes/Death.tscn" id="9_2lxyi"]
+[ext_resource type="AudioStream" uid="uid://bhoyp6k0ysq5w" path="res://music/InGameMusicFullHealthStart.mp3" id="9_cqwdo"]
 
 [sub_resource type="Animation" id="Animation_gmoql"]
 resource_name = "fade1to2"
@@ -106,13 +109,13 @@ position = Vector2(345, 419)
 
 [node name="MusicManager" type="Node2D" parent="."]
 script = ExtResource("4_076cc")
-tracks = Array[AudioStreamMP3]([ExtResource("7_dmlb8"), ExtResource("8_w7avr")])
+tracks = Array[AudioStreamMP3]([ExtResource("5_hn5el"), ExtResource("6_mjgo5"), ExtResource("7_fd10w"), ExtResource("8_xqs8g")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("7_dmlb8")
+stream = ExtResource("9_cqwdo")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicManager"]
-stream = ExtResource("8_w7avr")
+stream = ExtResource("9_cqwdo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MusicManager"]
 libraries = {
