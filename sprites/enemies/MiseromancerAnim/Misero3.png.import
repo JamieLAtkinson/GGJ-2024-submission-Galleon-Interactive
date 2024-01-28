@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8dkhas0np41a"
-path="res://.godot/imported/HeartBar.png-c2a21e7c2adaf779e49243457a44e21b.ctex"
+uid="uid://ckrqhap4napmm"
+path="res://.godot/imported/Misero3.png-7c1fd13de0a1929d84f4620b545c526b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/HeartBar.png"
-dest_files=["res://.godot/imported/HeartBar.png-c2a21e7c2adaf779e49243457a44e21b.ctex"]
+source_file="res://sprites/enemies/MiseromancerAnim/Misero3.png"
+dest_files=["res://.godot/imported/Misero3.png-7c1fd13de0a1929d84f4620b545c526b.ctex"]
 
 [params]
 
