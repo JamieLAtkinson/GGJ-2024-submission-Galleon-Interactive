@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_2mssp"]
 [ext_resource type="PackedScene" uid="uid://ckkko5r5ahcr2" path="res://scenes/Door.tscn" id="4_yb32m"]
 [ext_resource type="PackedScene" uid="uid://csqtmo46rdns0" path="res://scenes/Npc.tscn" id="5_uj8q1"]
-[ext_resource type="Texture2D" uid="uid://voxctyd40615" path="res://sprites/player/PlayerAnim1.png" id="6_300bt"]
+[ext_resource type="Texture2D" path="res://sprites/player/PlayerAnim1.png" id="6_300bt"]
 [ext_resource type="PackedScene" uid="uid://nysqy6kblnj1" path="res://scenes/MiseroMancerEnemy.tscn" id="6_drh11"]
 [ext_resource type="PackedScene" uid="uid://ckw24i0qeksh4" path="res://scenes/miseromancer.tscn" id="8_xw5hq"]
 

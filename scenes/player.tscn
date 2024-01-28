@@ -1,27 +1,73 @@
-[gd_scene load_steps=8 format=3 uid="uid://ih7qin48tcq2"]
+[gd_scene load_steps=16 format=3 uid="uid://ih7qin48tcq2"]
 
 [ext_resource type="Script" path="res://src/player.cs" id="1_cmpk2"]
 [ext_resource type="PackedScene" uid="uid://iwpn42b4isir" path="res://scenes/Attack.tscn" id="2_btn0h"]
-[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_gdpt1"]
 [ext_resource type="AudioStream" uid="uid://c2x21cffxmswb" path="res://sfx/Slash.mp3" id="3_diy6k"]
 [ext_resource type="AudioStream" uid="uid://hyaguv8xokpt" path="res://sfx/PlayerTakingDamage.mp3" id="4_4gvts"]
 [ext_resource type="AudioStream" uid="uid://dt4neow5tuvwp" path="res://sfx/DeathJingle.mp3" id="5_xuxli"]
+[ext_resource type="Texture2D" uid="uid://if53ni6tdb7f" path="res://sprites/PlayerAnimation.png" id="6_cnlnt"]
+[ext_resource type="AudioStream" uid="uid://dny8pwvrb2nl7" path="res://sfx/Dash.mp3" id="6_rqg7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_48cna"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2q3h"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(0, 0, 180, 235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bablk"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(180, 0, 180, 235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eprob"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(360, 0, 180, 235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6inc"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(540, 0, 180, 235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh4li"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(720, 0, 180, 235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjyex"]
+atlas = ExtResource("6_cnlnt")
+region = Rect2(900, 0, 180, 235)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3dao"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2q3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bablk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eprob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6inc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh4li")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjyex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 8
 script = ExtResource("1_cmpk2")
 attack = ExtResource("2_btn0h")
-sfx = Array[AudioStreamMP3]([ExtResource("3_diy6k"), ExtResource("4_4gvts"), ExtResource("5_xuxli")])
+sfx = Array[AudioStreamMP3]([ExtResource("3_diy6k"), ExtResource("4_4gvts"), ExtResource("5_xuxli"), ExtResource("6_rqg7h")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_48cna")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(5.96046e-08, 1)
-scale = Vector2(0.15625, 0.234375)
-texture = ExtResource("2_gdpt1")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -32,5 +78,10 @@ shape = SubResource("CapsuleShape2D_48cna")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 19.252
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.111162, 0.132963)
+sprite_frames = SubResource("SpriteFrames_x3dao")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -35,6 +35,8 @@ public partial class player : CharacterBody2D
 	public override void _Ready(){
 		Hp = MaxHp;
 		sfxp = (AudioStreamPlayer)GetNode("AudioStreamPlayer");
+		var an = (AnimatedSprite2D)GetNode("AnimatedSprite2D");
+		an.Play();
 		
 	}
 	public override void _Process(double delta){
@@ -106,6 +108,7 @@ public partial class player : CharacterBody2D
 			_dashTime = dashLength;
 			_canDash = false;
 			_dashDir = direction;
+			playsound(3);
 		}
 		if(_dashTime>0){
 			velocity.X += _dashDir.X * dashSpeed;
@@ -114,6 +117,14 @@ public partial class player : CharacterBody2D
 		if(ZeroV){
 			Velocity = Vector2.Zero;
 			ZeroV = false;
+		}
+		if(LastDir.X == Vector2.Left.X){
+			var z = (AnimatedSprite2D)GetNode("AnimatedSprite2D");
+			z.FlipH = true;
+		}
+		else{
+			var z = (AnimatedSprite2D)GetNode("AnimatedSprite2D");
+			z.FlipH = false;
 		}
 		MoveAndSlide();
 	}
@@ -150,6 +161,9 @@ public partial class player : CharacterBody2D
 	private void HpChanged (int Change)
 	{
 		Hp = Hp - Change;
+		if(Hp>MaxHp){
+			Hp = MaxHp;
+		}
 		ui.UpdateBar(Hp);
 	}
 	public int GetHp(){
