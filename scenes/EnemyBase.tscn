@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cllme05y1o56d"]
 
 [ext_resource type="Script" path="res://src/EnemyBase.cs" id="1_d3x58"]
-[ext_resource type="Texture2D" path="res://sprites/Misero.png" id="2_3qi0s"]
+[ext_resource type="Texture2D" uid="uid://c7l4n15gwesi8" path="res://sprites/Misero.png" id="2_3qi0s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
 

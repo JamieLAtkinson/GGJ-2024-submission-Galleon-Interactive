@@ -1,17 +1,172 @@
-[gd_scene load_steps=3 format=3 uid="uid://fc7pxs5dpl2a"]
+[gd_scene load_steps=26 format=3 uid="uid://fc7pxs5dpl2a"]
 
 [ext_resource type="Script" path="res://src/miseromancer.cs" id="1_onbur"]
+[ext_resource type="Texture2D" uid="uid://chmwwvu8xed3v" path="res://sprites/Miseroboss.png" id="1_sda12"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hajuk"]
+atlas = ExtResource("1_sda12")
+region = Rect2(0, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0luo"]
+atlas = ExtResource("1_sda12")
+region = Rect2(330, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0wwp"]
+atlas = ExtResource("1_sda12")
+region = Rect2(660, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_204jw"]
+atlas = ExtResource("1_sda12")
+region = Rect2(990, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8olm6"]
+atlas = ExtResource("1_sda12")
+region = Rect2(1320, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suk8c"]
+atlas = ExtResource("1_sda12")
+region = Rect2(1650, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn8x1"]
+atlas = ExtResource("1_sda12")
+region = Rect2(1980, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqw4o"]
+atlas = ExtResource("1_sda12")
+region = Rect2(2310, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn4xh"]
+atlas = ExtResource("1_sda12")
+region = Rect2(2640, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73atb"]
+atlas = ExtResource("1_sda12")
+region = Rect2(2970, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhmie"]
+atlas = ExtResource("1_sda12")
+region = Rect2(3300, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fsfp"]
+atlas = ExtResource("1_sda12")
+region = Rect2(3630, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et2hr"]
+atlas = ExtResource("1_sda12")
+region = Rect2(3960, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fiv6"]
+atlas = ExtResource("1_sda12")
+region = Rect2(4290, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co88o"]
+atlas = ExtResource("1_sda12")
+region = Rect2(4620, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0e6u"]
+atlas = ExtResource("1_sda12")
+region = Rect2(4950, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt3py"]
+atlas = ExtResource("1_sda12")
+region = Rect2(5280, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6voq"]
+atlas = ExtResource("1_sda12")
+region = Rect2(5610, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndmsh"]
+atlas = ExtResource("1_sda12")
+region = Rect2(5940, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk41i"]
+atlas = ExtResource("1_sda12")
+region = Rect2(6270, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w3oq"]
+atlas = ExtResource("1_sda12")
+region = Rect2(6600, 0, 330, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tscmx"]
+atlas = ExtResource("1_sda12")
+region = Rect2(6930, 0, 330, 245)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_evf7r"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hajuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0luo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0wwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_204jw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8olm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suk8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn8x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqw4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn4xh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73atb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhmie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fsfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et2hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fiv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co88o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0e6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt3py")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6voq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndmsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qk41i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7w3oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tscmx")
+}],
 "loop": true,
-"name": &"new_animation",
-"speed": 5.0
+"name": &"default",
+"speed": 17.0
 }]
 
 [node name="Miseromancer" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_evf7r")
-animation = &"new_animation"
-autoplay = "new_animation"
+frame = 4
+frame_progress = 0.91017
 script = ExtResource("1_onbur")

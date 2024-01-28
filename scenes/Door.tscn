@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c64ajluatg355"]
+[gd_scene load_steps=4 format=3 uid="uid://ckkko5r5ahcr2"]
 
 [ext_resource type="Script" path="res://src/Door.cs" id="1_ur8kj"]
+[ext_resource type="Texture2D" uid="uid://dc6hlf4itoan8" path="res://sprites/swirl.png" id="2_5k6cu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4d3tj"]
 size = Vector2(58, 63)
@@ -15,5 +16,10 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_4d3tj")
+
+[node name="Swirl" type="Sprite2D" parent="."]
+position = Vector2(-2.5, 2.5)
+scale = Vector2(0.38125, 0.38125)
+texture = ExtResource("2_5k6cu")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

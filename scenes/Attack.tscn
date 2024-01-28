@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://iwpn42b4isir"]
 
-[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="1_av7x7"]
 [ext_resource type="Script" path="res://src/Attack.cs" id="1_qglry"]
+[ext_resource type="Texture2D" uid="uid://dtm5a8aq2l1b3" path="res://sprites/Slash.PNG" id="2_34jhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syj0o"]
 size = Vector2(21.9822, 20)
@@ -10,8 +10,9 @@ size = Vector2(21.9822, 20)
 script = ExtResource("1_qglry")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 0.240001)
-texture = ExtResource("1_av7x7")
+position = Vector2(-6.5, -0.499999)
+scale = Vector2(2.31667, 0.173684)
+texture = ExtResource("2_34jhs")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

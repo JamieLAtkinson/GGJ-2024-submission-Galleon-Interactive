@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://src/player.cs" id="1_cmpk2"]
 [ext_resource type="PackedScene" uid="uid://iwpn42b4isir" path="res://scenes/Attack.tscn" id="2_btn0h"]
-[ext_resource type="AudioStream" path="res://sfx/Slash.mp3" id="3_diy6k"]
-[ext_resource type="AudioStream" path="res://sfx/PlayerTakingDamage.mp3" id="4_4gvts"]
-[ext_resource type="AudioStream" path="res://sfx/DeathJingle.mp3" id="5_xuxli"]
-[ext_resource type="Texture2D" path="res://sprites/PlayerAnimation.png" id="6_cnlnt"]
-[ext_resource type="AudioStream" path="res://sfx/Dash.mp3" id="6_rqg7h"]
+[ext_resource type="AudioStream" uid="uid://c2x21cffxmswb" path="res://sfx/Slash.mp3" id="3_diy6k"]
+[ext_resource type="AudioStream" uid="uid://hyaguv8xokpt" path="res://sfx/PlayerTakingDamage.mp3" id="4_4gvts"]
+[ext_resource type="AudioStream" uid="uid://dt4neow5tuvwp" path="res://sfx/DeathJingle.mp3" id="5_xuxli"]
+[ext_resource type="Texture2D" uid="uid://if53ni6tdb7f" path="res://sprites/PlayerAnimation.png" id="6_cnlnt"]
+[ext_resource type="AudioStream" uid="uid://dny8pwvrb2nl7" path="res://sfx/Dash.mp3" id="6_rqg7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_48cna"]
 
