@@ -118,7 +118,7 @@ public partial class player : CharacterBody2D
 			Velocity = Vector2.Zero;
 			ZeroV = false;
 		}
-		if(LastDir.X == Vector2.Left.X){
+		if(LastDir.X <0){
 			var z = (AnimatedSprite2D)GetNode("AnimatedSprite2D");
 			z.FlipH = true;
 		}
