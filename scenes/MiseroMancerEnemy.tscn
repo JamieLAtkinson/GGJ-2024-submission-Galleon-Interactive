@@ -1,10 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://nysqy6kblnj1"]
+[gd_scene load_steps=8 format=3 uid="uid://nysqy6kblnj1"]
 
 [ext_resource type="Script" path="res://src/MiseroMancerEnemy.cs" id="1_gpxcy"]
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_bh8hq"]
-[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_tvymt"]
+[ext_resource type="Texture2D" uid="uid://bduek8fudya07" path="res://sprites/enemies/MiseromancerAnim/Misero1.png" id="3_l7qfg"]
+[ext_resource type="Texture2D" uid="uid://cllw8qsw6upmd" path="res://sprites/enemies/MiseromancerAnim/Misero2.png" id="4_x6f6y"]
+[ext_resource type="Texture2D" uid="uid://ckrqhap4napmm" path="res://sprites/enemies/MiseromancerAnim/Misero3.png" id="5_q2leu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sjdag"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l7qfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x6f6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q2leu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MIseromancer" type="CharacterBody2D"]
 collision_layer = 4
@@ -12,9 +31,10 @@ script = ExtResource("1_gpxcy")
 target = ExtResource("2_bh8hq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.52, 1.79452)
 shape = SubResource("CapsuleShape2D_qmmbi")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(3.8147e-06, 2.38419e-07)
-scale = Vector2(0.121445, 0.24)
-texture = ExtResource("2_tvymt")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, 1)
+scale = Vector2(0.262388, 0.245866)
+sprite_frames = SubResource("SpriteFrames_sjdag")

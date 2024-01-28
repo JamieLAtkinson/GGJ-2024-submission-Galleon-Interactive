@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://voxctyd40615" path="res://sprites/player/PlayerAnim1.png" id="2_sp46q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npsmw"]
+size = Vector2(14.1129, 10.6855)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciifr"]
 size = Vector2(200, 173)
@@ -13,6 +14,7 @@ collision_layer = 16
 script = ExtResource("1_eprdr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1.5)
 scale = Vector2(2.48, 4.96)
 shape = SubResource("RectangleShape2D_npsmw")
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckw24i0qeksh4"]
+
+[ext_resource type="Texture2D" uid="uid://bduek8fudya07" path="res://sprites/enemies/MiseromancerAnim/Misero1.png" id="1_4usi3"]
+[ext_resource type="Script" path="res://src/miseromancer.cs" id="1_onbur"]
+[ext_resource type="Texture2D" uid="uid://cllw8qsw6upmd" path="res://sprites/enemies/MiseromancerAnim/Misero2.png" id="2_wucut"]
+[ext_resource type="Texture2D" uid="uid://ckrqhap4napmm" path="res://sprites/enemies/MiseromancerAnim/Misero3.png" id="3_b0yvc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_evf7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4usi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wucut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b0yvc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Miseromancer" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_evf7r")
+script = ExtResource("1_onbur")

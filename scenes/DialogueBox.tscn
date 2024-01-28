@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0id12kckubo"]
 
 [ext_resource type="Script" path="res://src/DialogueBox.cs" id="1_6pej3"]
-[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="1_g28n4"]
+[ext_resource type="Texture2D" uid="uid://c3nf58ny2pe6r" path="res://sprites/TextBoxFull.png" id="2_3q767"]
 
 [node name="DialogueBox" type="Control"]
 layout_mode = 3
@@ -17,13 +17,15 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.76, 2.20636)
-texture = ExtResource("1_g28n4")
+texture = ExtResource("2_3q767")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 1147.0
-offset_bottom = 91.0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 1126.0
+offset_bottom = 80.0
 bbcode_enabled = true
 scroll_active = false
 scroll_following = true
