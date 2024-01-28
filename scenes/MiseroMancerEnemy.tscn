@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://nysqy6kblnj1"]
+[gd_scene load_steps=8 format=3 uid="uid://bbrj7co3gcfci"]
 
 [ext_resource type="Script" path="res://src/MiseroMancerEnemy.cs" id="1_gpxcy"]
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_bh8hq"]

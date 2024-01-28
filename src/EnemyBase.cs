@@ -33,8 +33,7 @@ public partial class EnemyBase : CharacterBody2D
 	{
 		Velocity = new Vector2(Velocity.X,gravity+Velocity.Y);
 		if (!raycast.IsColliding() || !raycast3.IsColliding()|| raycast2.IsColliding() || raycast4.IsColliding()){
-			Velocity = new Vector2(Velocity.X*-1,Velocity.Y);
-			x.FlipV = !x.FlipV;
+			Velocity = new Vector2(Velocity.X*-1,Velocity.Y);;
 			x.FlipH = !x.FlipH;
 		}
 		MoveAndSlide();
