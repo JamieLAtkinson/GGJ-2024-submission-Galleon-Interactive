@@ -13,11 +13,13 @@ public partial class ManagerScene : Node2D
 		pnode.ui = (UI)GetNode("Ui");
 		pnode.DB = (DialogueBox)GetNode("DialogueBox");
 		pnode.DS = (Control)GetNode("Death");
+		pnode.MM = _MusicManager;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		_MusicManager.Process();
 	}
 	public void SwapScene(Door door,Node rem){
 		GD.Print("3");

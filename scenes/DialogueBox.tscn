@@ -20,12 +20,11 @@ scale = Vector2(28.76, 2.20636)
 texture = ExtResource("1_g28n4")
 expand_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1147.0
+offset_bottom = 91.0
 bbcode_enabled = true
-fit_content = true
 scroll_active = false
 scroll_following = true
 autowrap_mode = 0

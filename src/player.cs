@@ -29,6 +29,7 @@ public partial class player : CharacterBody2D
 	public PackedScene attack;
 	public bool ZeroV = false;
 	public Control DS;
+	public MusicManager MM;
 	private bool dead = false;
 	public override void _Ready(){
 		Hp = MaxHp;
@@ -54,19 +55,20 @@ public partial class player : CharacterBody2D
 			_attack.Rotation = Vector2.Right.AngleTo(LastDir);
 			AddChild(_attack);
 		}
-		if(Input.IsActionJustPressed("interact")){
-			GD.Print(Dialogue);
-			if (Dialogue != new string[0]){
-				GD.Print("Beeep");
-				ReadDialogue();
-			}
-		}
+		
 	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
 		if(dead){
 			return;
+		}
+		
+		if(Input.IsActionJustPressed("interact")){
+			//GD.Print(Dialogue);
+			if (ableOpen){
+				ReadDialogue();
+			}
 		}
 		Vector2 velocity = Velocity;
 
@@ -123,6 +125,21 @@ public partial class player : CharacterBody2D
 	public void DamageTaken(int DamageAmount)
 	{
 		HpChanged(DamageAmount);
+		if(Hp > 8){
+			MM.ChangeTrack(0);
+		}
+		if(Hp <= 8 && Hp > 6){
+			MM.ChangeTrack(1);
+		}
+		if(Hp <= 6 && Hp > 4){
+			MM.ChangeTrack(2);
+		}
+		if(Hp <= 4 && Hp > 2){
+			MM.ChangeTrack(3);
+		}
+		if(Hp <= 2 && Hp > 0){
+			MM.ChangeTrack(4);
+		}
 		if(Hp <= 0){
 			DS.Show();
 			dead = true;
@@ -153,18 +170,20 @@ public partial class player : CharacterBody2D
 	private int DialoguePointer = 0;
 	public DialogueBox DB;
 	public UI ui;
+	private bool ableOpen;
 	public void SetNPC(string[] dialogue){
 		Dialogue = dialogue;
+		ableOpen = true;
 	}
 	public void RemNPC(){
 		Dialogue = new string[0];
 		DialoguePointer = 0;
+		ableOpen = false;
 		DB.Hide();
 	}
 	private void ReadDialogue(){
-		GD.Print(DB);
+		//GD.Print(DB);
 		DB.Show();
-		GD.Print("beepboop");
 		DB.AppendText(Dialogue[DialoguePointer]);
 		DialoguePointer++;
 		if(DialoguePointer == Dialogue.Length){

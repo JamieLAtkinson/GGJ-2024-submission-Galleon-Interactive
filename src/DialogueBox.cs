@@ -7,7 +7,7 @@ public partial class DialogueBox : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_label = GetNode<RichTextLabel>("TextureRect/RichTextLabel");	
+		_label = GetNode<RichTextLabel>("RichTextLabel");	
 	}
 	public void AppendText(string Text){
 		_label.Text += Text + "\n";

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://nysqy6kblnj1"]
+
+[ext_resource type="Script" path="res://scenes/MiseroMancerEnemy.cs" id="1_gpxcy"]
+[ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_tvymt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qmmbi"]
+
+[node name="MIseromancer" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_gpxcy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qmmbi")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 2.38419e-07)
+scale = Vector2(0.121445, 0.24)
+texture = ExtResource("2_tvymt")

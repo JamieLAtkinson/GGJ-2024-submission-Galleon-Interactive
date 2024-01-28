@@ -13,6 +13,10 @@ public partial class Attack : Node2D
 			EnemyBase Enemy = body as EnemyBase;
 			Enemy.damage(damage);
 		}
+		if (body is MiseroMancerEnemy){
+			MiseroMancerEnemy Enemy = body as MiseroMancerEnemy;
+			Enemy.damage(damage);
+		}
 		
 	}
 	public override void _Process(double delta){

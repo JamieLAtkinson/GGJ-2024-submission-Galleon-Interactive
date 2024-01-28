@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/BaseScene.cs" id="1_djfp6"]
 [ext_resource type="Texture2D" uid="uid://bi57mf6lr71fo" path="res://icon.svg" id="2_q1gmm"]
-[ext_resource type="PackedScene" path="res://scenes/SpawnPoint.tscn" id="3_t6v72"]
+[ext_resource type="PackedScene" uid="uid://ddwvxrw6fdbs1" path="res://scenes/SpawnPoint.tscn" id="3_t6v72"]
 
 [node name="GameScene2" type="Node2D"]
 script = ExtResource("1_djfp6")

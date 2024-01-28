@@ -8,10 +8,10 @@ public partial class EnemyBase : CharacterBody2D
 	private RayCast2D raycast3;
 	private RayCast2D raycast4;
 	[Export]
-	private int MaxHp = 10;
+	private int MaxHp = 1;
 	private int Hp;
 	[Export]
-	public int Damage = 2;
+	public int Damage = 1;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
