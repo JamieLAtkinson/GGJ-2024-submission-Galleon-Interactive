@@ -8,9 +8,21 @@ public partial class MiseroMancerEnemy : CharacterBody2D
 	[Export]
 	private int MaxHp = 1;
 	private int Hp;
+	[Export]
+	public float spcd = 3f;
+	private float cd;
+	[Export]
+	public PackedScene target;
 	public override void _Ready()
 	{
 		Hp = MaxHp;
+	}
+	public override void _Process(double delta){
+		cd -= (float)delta;
+		if(cd<=0){
+			spawn();
+			cd = spcd;
+		}
 	}
 	public override void _PhysicsProcess(double delta)
 	{
@@ -32,5 +44,9 @@ public partial class MiseroMancerEnemy : CharacterBody2D
 	}
 	public void die(){
 		QueueFree();
+	}
+	private void spawn(){
+		Node s = target.Instantiate();
+		AddChild(s);
 	}
 }

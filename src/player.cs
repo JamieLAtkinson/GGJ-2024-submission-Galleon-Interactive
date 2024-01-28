@@ -31,8 +31,10 @@ public partial class player : CharacterBody2D
 	public Control DS;
 	public MusicManager MM;
 	private bool dead = false;
+	AudioStreamPlayer sfxp;
 	public override void _Ready(){
 		Hp = MaxHp;
+		sfxp = (AudioStreamPlayer)GetNode("AudioStreamPlayer");
 		
 	}
 	public override void _Process(double delta){
@@ -54,6 +56,7 @@ public partial class player : CharacterBody2D
 			_attack.Position = 80*LastDir;
 			_attack.Rotation = Vector2.Right.AngleTo(LastDir);
 			AddChild(_attack);
+			playsound(0);
 		}
 		
 	}
@@ -124,6 +127,7 @@ public partial class player : CharacterBody2D
 	public const int Damage = 10;
 	public void DamageTaken(int DamageAmount)
 	{
+		playsound(1);
 		HpChanged(DamageAmount);
 		if(Hp > 8){
 			MM.ChangeTrack(0);
@@ -140,6 +144,7 @@ public partial class player : CharacterBody2D
 		if(Hp <= 0){
 			DS.Show();
 			dead = true;
+			playsound(2);
 		}
 	}
 	private void HpChanged (int Change)
@@ -187,6 +192,14 @@ public partial class player : CharacterBody2D
 			DialoguePointer--;
 		}
 	}
+	[Export]
+	public AudioStreamMP3[] sfx;
+	
+	public void playsound(int index){
+		sfxp.Stream = sfx[index];
+		sfxp.Play();
+	}
+		
 
 }
 

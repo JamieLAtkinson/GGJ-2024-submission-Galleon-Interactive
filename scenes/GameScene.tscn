@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx7fu8h7ucj7i"]
+[gd_scene load_steps=10 format=3 uid="uid://dx7fu8h7ucj7i"]
 
 [ext_resource type="Script" path="res://src/BaseScene.cs" id="1_c0s1o"]
 [ext_resource type="Texture2D" uid="uid://b60tyjhfe37uj" path="res://sprites/TileSets/AnotherTileset/Assets.png" id="1_egwpq"]
 [ext_resource type="PackedScene" uid="uid://cllme05y1o56d" path="res://scenes/EnemyBase.tscn" id="2_2mssp"]
 [ext_resource type="PackedScene" uid="uid://ckkko5r5ahcr2" path="res://scenes/Door.tscn" id="4_yb32m"]
 [ext_resource type="PackedScene" uid="uid://csqtmo46rdns0" path="res://scenes/Npc.tscn" id="5_uj8q1"]
+[ext_resource type="Texture2D" uid="uid://voxctyd40615" path="res://sprites/player/PlayerAnim1.png" id="6_300bt"]
+[ext_resource type="PackedScene" uid="uid://nysqy6kblnj1" path="res://scenes/MiseroMancerEnemy.tscn" id="6_drh11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3b5a"]
 texture = ExtResource("1_egwpq")
@@ -102,3 +104,7 @@ target = "GameScene2.tscn"
 [node name="Npc" parent="." instance=ExtResource("5_uj8q1")]
 position = Vector2(292, 578)
 dialogue = PackedStringArray("hi", "hi")
+sprite = ExtResource("6_300bt")
+
+[node name="MIseromancer" parent="." instance=ExtResource("6_drh11")]
+position = Vector2(778, 558)
